@@ -1,0 +1,29 @@
+[package]
+name = "solana-scoring-cli"
+version = "0.8.0"
+description = "Solana Scoring Program CLI"
+authors = ["Nobility DAO Maintainers <solanapope@gmail.com>"]
+repository = "https://github.com/nobledao/solana-scoring"
+license = "Apache-2.0"
+edition = "2018"
+
+[dependencies]
+borsh = "0.9.1"
+borsh-derive = "0.9.0"
+chrono = "0.4.19"
+clap = "2.33.3"
+solana-clap-utils = "1.8.1"
+solana-cli-config = "1.8.1"
+solana-client = "1.8.1"
+solana-logger = "1.8.1"
+solana-remote-wallet = "=1.8.1"
+solana-sdk = "1.8.1"
+url = "2.1.0"
+solana-scoring = { version = "0.8.0", path = "../program", features = ["no-entrypoint"] }
+
+[[bin]]
+name = "solana-scoring"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

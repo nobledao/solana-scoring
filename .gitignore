@@ -1,0 +1,4 @@
+target/**/*
+cli/target/**/*
+program/target/**/*
+program/*.json
